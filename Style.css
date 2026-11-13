@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 65px;
+    height: 100vh;
+
+    background: #121214;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+
+    margin: 15px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #333;
+    border-radius: 15px;
+
+    color: white;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1B1A1F;
+    color: white;
+}
+
+main {
+  margin-left: 80px;
+  
+}
+
+.banner { 
+  width: 100%;
+  overflow: hidden;
+  
+}
+
+.banner img { 
+  width: 100%;
+  height: 200px;
+  border-radius : 10px;
+
+  object-fit: contain;
+  display: block;
+
+}
+
+.title {
+
+  background : transparent;
+  padding: 0;
+  text-alight: left;
+  
+}
+
+.title h1 {
+
+  margin: 0;
+  text-alight: left;
+  font-family: "Cinzel Decotative", serif;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -0,5px;
+  
+}
+
+.search {
+    margin-top: spx auto 20px;
+    width: 350px;
+}
+
+.search {
+  width: 320px;
+  height: 35px;
+  margin: 5px auto 20px;
+  position: relative;
+  left: -30px;
+  padding: 0 15px;
+  display: flex;
+  alight-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  box-sizing: border-box;
+  
+}
+
+.search svg  {
+  transform: translateY(5px);
+}
+.search span {
+    transform: translate(-9px, 10px);
+}
+
+main {
+    pdding: 0;
+    text-align: left;
+}
+
+
+.profile-bar {
+    position: fixed;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+
+    height: 65px;
+    padding: 10px 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #1b1a23;
+    border: 1px solid #292838;
+    border-radius: 18px;
+
+    color: white;
+    cursor: pointer;
+
+    z-index: 1000;
+}
+
+.profile-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Avatar bagian bawah*/
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-name {
+    font-size: 15px;
+    font-weight: 600;
+    font-family: "cinzel-decorative", serif;
+}
+
+.profile-arrow {
+    font-size: 25px;
+    color: #aaa8b8;
+}
+
+
+/* Area sentuh swipe panel */
+.panel-handle {
+    width: 100%;
+    height: 55px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Garis kecil tetap berada di tengah */
+.panel-handle::before {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 5px;
+    background: #777582;
+    border-radius: 10px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+    z-index: 0;
+}
+
+.profile-header::before{
+    content:"";
+    top: 35px;
+    left: 20px;
+    width: 450px;
+    height: 90px;
+    position: absolute;
+    inset: 0;
+    background:#211f2b;
+    border-radius:15px;
+    z-index: -1;
+}
+
+/* profile header */
+.profile-header-avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    order: 2;
+}
+
+.profile-header-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-info {
+    order: 1;
+    text-align: left;
+    margin: 0;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.profile-info p {
+    margin: 5px 0 0;
+    color: white;
+    font-family: "cinzel-decorative", serif;
+    flex-direction: column;
+}
+
+.edit-profile {
+    width: 100%;
+    height: 48px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #5865f2;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile-tabs {
+    display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid #292838;
+}
+
+.tab {
+    flex: 1;
+    padding: 12px;
+
+    background: transparent;
+    border: none;
+    color: #aaa8b8;
+
+    font-size: 15px;
+}
+
+.tab.active {
+    color: #8492ff;
+    border-bottom: 3px solid #8492ff;
+}
+
+.profile-content {
+    padding-top: 20px;
+}
+
+.profile-card {
+    margin-bottom: 15px;
+    padding: 15px;
+
+    background: #211f27;
+    border-radius: 15px;
+}
+
+.profile-card h3 {
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-actions button,
+.balance button {
+    flex: 1;
+    padding: 13px;
+
+    background: #34313c;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+}
+
+.balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balance button {
+    flex: initial;
+}
+
+.profile-detail {
+    margin: 20px 0;
+    color: #aaa8b8;
+}
+
+.profile-detail p {
+    margin: 0 0 8px;
+}
+
+.profile-detail strong {
+    color: white;
+}
+
+.profile-link {
+    width: 100%;
+    padding: 18px;
+
+    text-align: left;
+
+    background: #211f27;
+    color: white;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 16px;
+}
+
+.profile-screen {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 95vh;
+
+    background: #131217;
+    color: white;
+
+    overflow-y: auto;
+
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+
+    transform: translateY(100%);
+    transition: transform 0.35s ease;
+
+    z-index: 2000;
+}
+
+.profile-screen.show {
+    transform: translateY(0);
+}
+
+.close-profile {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+    border-radius: 25%;
+
+    background: #292832;
+    color: white;
+
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.profile-arrow {
+    display: inline-block;
+    transform: rotate(-90deg) translateY(-5px);
+  
+  }
